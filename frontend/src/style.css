@@ -1,0 +1,106 @@
+:root,
+[data-theme='dark'] {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --surface-hover: #1e2a4a;
+  --border: #2d3047;
+  --text: #e4e0d7;
+  --text-secondary: #7c7f90;
+  --text-dim: #5a5d6e;
+  --accent: #e8a850;
+  --accent-dim: rgba(232, 168, 80, 0.12);
+  --accent-text: #1a1a2e;
+  --success: #4ade80;
+  --danger: #ef4444;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --card-border: 1px solid var(--border);
+}
+
+[data-theme='light'] {
+  --bg: #f5f0e8;
+  --surface: #ffffff;
+  --surface-hover: #f8f5f0;
+  --border: #e0d8c8;
+  --text: #2c2416;
+  --text-secondary: #7a7058;
+  --text-dim: #b0a890;
+  --accent: #c47a10;
+  --accent-dim: rgba(196, 122, 16, 0.1);
+  --accent-text: #ffffff;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --shadow: 0 2px 16px rgba(0,0,0,0.08);
+  --card-border: 1px solid var(--border);
+}
+
+:root {
+  --display: Georgia, 'Times New Roman', serif;
+  --body: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { overflow-x: hidden; }
+#app { min-height: 100dvh; padding-bottom: 56px; }
+
+/* Vant overrides — mapped to theme tokens */
+:root,
+[data-theme='dark'],
+[data-theme='light'] {
+  --van-nav-bar-background: var(--surface);
+  --van-nav-bar-title-text-color: var(--text);
+  --van-nav-bar-icon-color: var(--text);
+  --van-nav-bar-border-color: var(--border);
+  --van-tabbar-background: var(--surface);
+  --van-tabbar-item-text-color: var(--text-secondary);
+  --van-tabbar-item-active-color: var(--accent);
+  --van-tabbar-item-active-background: var(--surface);
+  --van-cell-background: var(--surface);
+  --van-cell-text-color: var(--text);
+  --van-cell-label-color: var(--text-secondary);
+  --van-cell-group-inset-padding: 16px;
+  --van-button-primary-background: var(--accent);
+  --van-button-primary-border-color: var(--accent);
+  --van-button-primary-color: var(--accent-text);
+  --van-button-danger-background: var(--danger);
+  --van-button-danger-color: #fff;
+  --van-button-success-background: var(--success);
+  --van-button-success-color: #fff;
+  --van-field-input-text-color: var(--text);
+  --van-field-label-color: var(--text-secondary);
+  --van-tabs-nav-background: var(--bg);
+  --van-tab-text-color: var(--text-secondary);
+  --van-tab-active-text-color: var(--accent);
+  --van-tabs-line-color: var(--accent);
+  --van-grid-item-content-background: var(--surface);
+  --van-grid-item-text-color: var(--text-secondary);
+  --van-divider-border-color: var(--border);
+  --van-empty-description-color: var(--text-secondary);
+  --van-loading-text-color: var(--text-secondary);
+  --van-notice-bar-background: var(--accent-dim);
+  --van-notice-bar-text-color: var(--accent);
+  --van-hairline-color: var(--border);
+  --van-overlay-background: rgba(0,0,0,0.5);
+  --van-dialog-background: var(--surface);
+  --van-dialog-message-text-color: var(--text-secondary);
+}
+
+.van-nav-bar { border-bottom: 1px solid var(--border); }
+.van-tabbar { border-top: 1px solid var(--border); }
+.van-button--primary { font-weight: 600; letter-spacing: 0.5px; }
+.van-button--danger, .van-button--success { font-weight: 600; }
+.van-progress { height: 3px !important; background: var(--border); }
+.van-cell-group--inset { margin: 0 16px; border-radius: var(--radius); overflow: hidden; }
+.van-cell { padding: 14px 16px; }
+.van-cell-group--inset .van-cell:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+.van-cell-group--inset .van-cell:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+.van-tabs__line { background: var(--accent); }
+.van-grid-item__content { border-radius: var(--radius); }
+.van-field__control::placeholder { color: var(--text-dim); }
+.van-uploader__input { display: none; }
