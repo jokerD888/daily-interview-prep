@@ -1,4 +1,4 @@
-﻿“”<template>
+﻿<template>
   <div class="auth-page">
     <div class="auth-header">
       <div class="brand-mark">&#9672;</div>

@@ -23,7 +23,7 @@
                 <span class="card-tag" :class="card.state === 'new' ? 'tag-new' : 'tag-review'">
                   {{ card.state === 'new' ? '新卡' : '复习' }}
                 </span>
-                <span class="card-stars">{{ '&#9733;'.repeat(card.importance_score) }}{{ '&#9734;'.repeat(5 - card.importance_score) }}</span>
+                <span class="card-stars">{{ '★'.repeat(card.importance_score) }}{{ '☆'.repeat(5 - card.importance_score) }}</span>
               </div>
               <p class="card-question">{{ card.question }}</p>
               <p class="flip-hint">轻触卡片翻转</p>
