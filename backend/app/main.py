@@ -21,6 +21,7 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(materials.router)
 app.include_router(cards.router)
+app.include_router(cards.card_router)
 app.include_router(reviews.router)
 app.include_router(push_progress.router)
 app.include_router(seed.router)

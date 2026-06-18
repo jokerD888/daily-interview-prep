@@ -8,10 +8,11 @@ class Card(Base):
     __tablename__ = "cards"
 
     id = Column(Integer, primary_key=True, index=True)
-    material_id = Column(Integer, ForeignKey("materials.id"), nullable=False)
+    material_id = Column(Integer, ForeignKey("materials.id"), nullable=True)
     question = Column(Text, nullable=False)
     answer = Column(Text, nullable=False)
     importance_score = Column(Integer, default=1)
+    source_url = Column(Text, nullable=True)
     created_at = Column(DateTime, server_default=func.now())
 
     material = relationship("Material", back_populates="cards")
